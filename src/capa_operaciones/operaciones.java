@@ -16,7 +16,7 @@ import javax.swing.table.DefaultTableModel;
 import Capa_conexion.conexion;
 /**
  *Case operaciones, donde declaro todos los metodos 
- * 
+ * @operaciones
  * @author javi
  */
 public class operaciones {
@@ -51,7 +51,7 @@ public class operaciones {
    }
    modelo.addRow(fila);
    }
-    }catch(Exception e){JOptionPane.showMessageDialog(null, e);}
+    }catch(Exception e){JOptionPane.showMessageDialog(null, "ha ocurrido algun error inesperado");}
     //retornamos modelo para jtable
     return modelo;
     
@@ -67,7 +67,10 @@ public class operaciones {
         s.close();
         cn.close();
         JOptionPane.showMessageDialog(null, "Agregado Correctamente");
-        }catch(Exception e){JOptionPane.showMessageDialog(null,"Error al agregar la consulta");}
+        }catch(Exception e){JOptionPane.showMessageDialog(null,"Error al agregar la consulta");
+        JOptionPane.showMessageDialog(null, "0 lineas agregadas");
+        }
+        
     }
         //CREAMOS METODO PARA ELIMINAR DATOS
         public void EliminarConsulta(String id){
@@ -78,8 +81,10 @@ public class operaciones {
        s.close();
        cn.close();
        JOptionPane.showMessageDialog(null, "Eliminado Correctamente");
-       }catch(Exception e){JOptionPane.showMessageDialog(null, "Error al eliminar una consulta, Prueba otra vez");}
-        
+       }catch(Exception e){JOptionPane.showMessageDialog(null, "Error al eliminar una consulta, Prueba otra vez");
+       
+       JOptionPane.showMessageDialog(null, "0 lineas modificadas");}
+       
         }
         //creamos metodo para modificar datos
         public void ModificarConsulta(String nombre,String precio,String ciudad,String id){
@@ -90,9 +95,11 @@ public class operaciones {
         s.close();
         cn.close();
         JOptionPane.showMessageDialog(null, "Modificado correctamente");
-        }catch(Exception e){JOptionPane.showMessageDialog(null, "No se ha modificado la consulta, algo está mal....");}
+        }catch(Exception e){JOptionPane.showMessageDialog(null, "No se ha modificado la consulta, algo está mal....");
+           JOptionPane.showMessageDialog(null, " 0 lineas modificadas");
+        }
         
-        
+
         }
 
    
@@ -100,5 +107,11 @@ public class operaciones {
     }
     
     
-    
+    /*
+Clase operaciones, donde se encuentran declarados todos los metodos que necesito, como agregar, eliminar....
+Cuando presiono por ejemplo el boton agregar, si se agrega correctamente en la base de datos aparecera un mensaje de agregado correctamente, junto con otro menssaje de cuantas columnas se han agregado
+Si no se consigue agregar ninguna linea, aparecera un error diciendo que se esta produciendo un error, y aparecera que el numero de lineas insertadas es 0 en este caso
+Pasa lo mismo con el boton eliminar y modificar
+El boton de actualizar, la unica funcion es actializar, no muestra ningun mensaje
+*/
 

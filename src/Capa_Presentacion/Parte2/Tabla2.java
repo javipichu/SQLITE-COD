@@ -7,8 +7,10 @@ package Capa_Presentacion.Parte2;
 
 import Capa_Presentacion.Vista;
 
-/**
- *
+/*/
+ *@param 
+ * segunda tabla, su uso es sencilo, cuando le das al boton de proveedores, te lleva a una lista para ver el lugar a donde iran dirigidos 
+ * 
  * @author jalvarezotero
  */
 public class Tabla2 extends javax.swing.JFrame {

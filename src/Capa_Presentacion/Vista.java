@@ -15,6 +15,7 @@ import javax.swing.table.DefaultTableModel;
 import capa_operaciones.operaciones;
 
 /**
+ *Clase main, no hay un metodo crear tabla, por que con he usado el programa sqlite shell con el que hice ese metodo en el propio programa al crear la base de datos.
  *clase principal, donde tengo mi jFrame, llamo a las otras clases importando los paquetes necesarios 
  * @author javi
  */
@@ -433,3 +434,10 @@ jtxt_ciudad.setText("");
     private javax.swing.JTextField jtxt_precio;
     // End of variables declaration//GEN-END:variables
 }
+/*
+Esta es la clase principal, con la interfaz grafica 
+Lo mas importante ya está explicado en la clase operaciones.
+Cuando le das al boton de proveedor, te lleva a la 2º tabla para ver solamente las ubicaciones de los supermercados
+Si le das al boton de volver te lleva de nuevo a la primera interfaz
+El boton limpiar pasa los paneles que esten escritos con cualquier cosa a blanco, para escribir de nuevo
+*/
